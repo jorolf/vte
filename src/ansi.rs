@@ -270,7 +270,7 @@ struct SyncState<T: Timeout> {
 
 impl<T: Timeout> Default for SyncState<T> {
     fn default() -> Self {
-        Self { buffer: Vec::with_capacity(SYNC_BUFFER_SIZE), timeout: T::default() }
+        Self { buffer: Vec::new(), timeout: T::default() }
     }
 }
 
